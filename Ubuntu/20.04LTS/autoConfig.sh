@@ -34,17 +34,17 @@ yes y | sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compos
 
 ######## Install Oracle jdk8 jdk-8u131 #########
 
-sudo mkdir /usr/java
+sudo mkdir /usr/jvm
 
 cd /usr
 
 sudo wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz
 
-sudo tar -zxvf jdk-8u131-linux-x64.tar.gz -C /usr/java
+sudo tar -zxvf jdk-8u131-linux-x64.tar.gz -C /usr/jvm
 
 sudo rm jdk-8u131-linux-x64.tar.gz
 
-sudo sed '$a export JAVA_HOME=/usr/java/jdk1.8.0_131\nexport JRE_HOME=${JAVA_HOME}/jre\nexport CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib\nexport PATH=${JAVA_HOME}/bin:$PATH' /etc/profile
+sudo sed '$a export JAVA_HOME=/usr/jvm/jdk1.8.0_131\nexport JRE_HOME=${JAVA_HOME}/jre\nexport CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib\nexport PATH=${JAVA_HOME}/bin:$PATH' /etc/profile
 
 source /etc/profile
 
