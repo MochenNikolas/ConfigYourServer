@@ -4,31 +4,27 @@
 # Last update time: 2022/12/08
 # This shell script is for [Ubuntu 20.04LTS]
 
-# Update the apt package index
-yes y | sudo apt-get update
-
 ######## Install docker (ref: official install document) ########
 
 # Uninstall old versions
-sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
 
-# Update the apt package index and install packages to allow apt to use a repository over HTTPS
-yes y | sudo apt-get install ca-certificates curl gnupg lsb-release
+sudo yum install -y yum-utils
 
-# Add Docker’s official GPG key
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
 
-# Use the following command to set up the repository
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-# Update the apt package index
-yes y | sudo apt-get update
-
-# Install the latest version of docker
-yes y | sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo systemctl start docker
 
 ######## End installation of docker ########
 
