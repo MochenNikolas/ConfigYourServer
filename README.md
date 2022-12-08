@@ -1,1 +1,2 @@
-# QCS
+# QCSR (Quickly Config Shell Repositroy)
+
