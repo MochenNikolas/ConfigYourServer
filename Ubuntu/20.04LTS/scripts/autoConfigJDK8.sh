@@ -2,7 +2,7 @@
 
 function log()
 {
-  echo "$[(date '+%Y-%m-%d %H:%M:%S')] [autoConfigJDK8.sh] $@"
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] [autoConfigJDK8.sh] $@"
 }
 
 
