@@ -25,3 +25,13 @@ sudo ./scripts/autoConfigJDK8.sh
 
 log "Finsh run autoConfigJDK8.sh..."
 
+# Install docker
+cd $WORK_PATH/QCSR/Ubuntu/20.04LTS
+
+log "Begin to run autoConfigDocker.sh..."
+
+sudo ./scripts/autoConfigDocker.sh
+
+log "Finsh run autoConfigDocker.sh..."
+
+
