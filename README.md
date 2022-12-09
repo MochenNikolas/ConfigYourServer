@@ -8,7 +8,7 @@
   git clone https://github.com/MochenNikolas/ConfigYourServer.git
   
   # 2. 进入对应发行版目录
-  cd /QCSR/[your_linux_type]/[your_release_version]
+  cd /ConfigYourServer/[your_linux_type]/[your_release_version]
   
   # 3. 修改脚本文件执行权限
   chmod 777 autoConfig.sh
