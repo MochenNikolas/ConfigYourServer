@@ -1,12 +1,23 @@
+#! /bin/bash
+
+function log()
+{
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] [autoConfigDocker.sh] $@"
+}
+
+
+
 ######## Install docker (ref: official install document) ########
 
 # Uninstall old versions
+log "Uninstall old versions"
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
 # Update the apt package index and install packages to allow apt to use a repository over HTTPS
 yes y | sudo apt-get install ca-certificates curl gnupg lsb-release
 
 # Add Docker’s official GPG key
+log "Add Docker’s official GPG key"
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
@@ -19,6 +30,7 @@ echo \
 yes y | sudo apt-get update
 
 # Install the latest version of docker
+log "Install the latest version of docker"
 yes y | sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 ######## Finish installation of docker ########
