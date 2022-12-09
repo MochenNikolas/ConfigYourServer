@@ -4,16 +4,21 @@
 
 ## 使用方法
 ```
-  # git clone 当前项目
+  # 1. git clone 当前项目
   git clone https://github.com/745698140/QCSR.git
-  # 进入对应发行版目录
+  # 2. 进入对应发行版目录
   cd /QCSR/’[your_linux_type]/[your_release_version]
-  # 修改脚本文件执行权限
+  # 3. 修改脚本文件执行权限
   chmod 777 autoConfig.sh
-  # 执行脚本文件
+  # 4. 执行脚本文件
   sudo ./autoConfig.sh
-  
 ```
 
-## 现已支持：
+## 现已支持发行版：
+1. Ubuntu - 20.04LTS
+2. CentOS - 7
+
+## 现已支持自动配置应用：
+1. Docker
+2. Oracle JDK8（8u131）
 
