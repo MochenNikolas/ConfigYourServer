@@ -1,6 +1,6 @@
-ConfigYourServer (Quickly Config Shell Repositroy)
+# ConfigYourServer (Quickly Config Shell Repositroy)
 
-ConfigYourServer 是服务器快速配置脚本文件仓库，通过执行自动配置脚本快速配置服务器相关应用环境
+***ConfigYourServer*** 是服务器快速配置脚本文件仓库，通过执行自动配置脚本快速配置服务器相关应用环境
 
 ## 使用方法
 ```
