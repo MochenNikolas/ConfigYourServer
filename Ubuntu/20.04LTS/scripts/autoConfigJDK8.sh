@@ -22,7 +22,7 @@ sudo tar -zxvf jdk-8u131-linux-x64.tar.gz -C /usr/java
 log "Remove tar.gz file"
 sudo rm jdk-8u131-linux-x64.tar.gz
 
-sudo sed '$a export JAVA_HOME=/usr/java/jdk1.8.0_131\nexport JRE_HOME=${JAVA_HOME}/jre\nexport CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib\nexport PATH=${JAVA_HOME}/bin:$PATH' /etc/profile
+sudo sed -i '$a export JAVA_HOME=/usr/java/jdk1.8.0_131\nexport JRE_HOME=${JAVA_HOME}/jre\nexport CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib\nexport PATH=${JAVA_HOME}/bin:$PATH' /etc/profile
 
 log "Reload the /etc/profile"
 source /etc/profile
