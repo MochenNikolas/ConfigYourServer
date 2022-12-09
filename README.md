@@ -5,7 +5,7 @@
 ## 使用方法(How to use)
 ```
   # 1. git clone 当前项目
-  git clone https://github.com/745698140/ConfigYourServer.git
+  git clone https://github.com/MochenNikolas/ConfigYourServer.git
   # 2. 进入对应发行版目录
   cd /QCSR/’[your_linux_type]/[your_release_version]
   # 3. 修改脚本文件执行权限
