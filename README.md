@@ -25,4 +25,4 @@
 1. Docker
 2. Oracle JDK8（8u131）
 3. Nodejs (v14.x)
-
+4. Hexo
