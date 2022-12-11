@@ -2,6 +2,11 @@
 
 ***ConfigYourServer*** 是服务器快速配置脚本文件仓库，通过执行自动配置脚本快速配置服务器相关应用环境
 
+持续维护并增加自动配置脚本中...
+
+Continuously maintain and add automatic configuration scripts...
+
+
 ## 使用方法(How to use)
 ```
   # 1. git clone 当前项目
