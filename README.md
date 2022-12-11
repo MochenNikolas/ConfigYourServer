@@ -24,4 +24,5 @@
 ## 现已支持自动配置应用(Applications & Environment Supported)
 1. Docker
 2. Oracle JDK8（8u131）
+3. Nodejs (v14.x)
 
