@@ -33,4 +33,12 @@ yes y | sudo apt-get update
 log "Install the latest version of docker"
 yes y | sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
+# Add sudo group
+
+sudo groupadd docker
+
+sudo gpasswd -a ${USER} docker
+
+sudo service docker restart
+
 ######## Finish installation of docker ########
